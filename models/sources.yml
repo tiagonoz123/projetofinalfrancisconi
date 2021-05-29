@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: adventureworkstiago
+    tables:
+      - name: customer
+      - name: person
+      - name: employee
+      - name: product
+      - name: salesorderdetail
+      - name: salesorderheader
+      - name: salesreason
+      - name: salesterritory
+      - name: store
+      - name: creditcard
+      - name: businessentityaddress
+      - name: address
+      - name: salesorderheadersalesreason
