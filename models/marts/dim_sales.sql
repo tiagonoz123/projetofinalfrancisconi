@@ -40,6 +40,7 @@ with salesorder as(
     salesorder.subtotal,
     salesorder.creditcardid,
     salesorder.status,
+    store.businessentityid,
     salesdetails.orderqty,
     salesdetails.unitprice,
     salesdetails.productid,
@@ -49,6 +50,7 @@ with salesorder as(
     left join salesdetails on salesorder.salesorderid = salesdetails.salesorderid
     left join creditcard on salesorder.creditcardid = creditcard.creditcardid
     left join salesterritory on salesorder.territoryid = salesterritory.territoryid
+    left join store on salesorder.salespersonid = store.salespersonid
   
     
      ),

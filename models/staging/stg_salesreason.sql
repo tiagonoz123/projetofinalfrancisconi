@@ -1,13 +1,11 @@
-with source_data as (
+with
+     source as (
+         select 
+         salesreasonid 
+         ,name as salesreason_name		
+         ,modifieddate		
+         ,reasontype
 
-    select 
-    salesreasonid,
-    name,
-	modifieddate,
-	reasontype
-    from {{ source('adventureworkstiago','salesreason') }}
-
-)
-
-select *
-from source_data
+     from {{ source('adventureworkstiago','salesreason') }}
+ )
+ select * from source 
